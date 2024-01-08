@@ -11,6 +11,7 @@ function App() {
  const handlePuppyClick = (puppyId) => {
   setFeatPupId(puppyId); // set the featPupId to the clicked puppy's ID
 };
+const featuredPup = puppies.find((pup)=> pup.id === featPupId);
 
 return (
   <div>
@@ -23,6 +24,15 @@ return (
 
 
     {featPupId !== null && <p>Selected Puppy ID: {featPupId}</p>}
+    {featPupId && (
+        <div>
+          <h2>{featuredPup.name}</h2>
+          <ul>
+            <li>Age: {featuredPup.age}</li>
+            <li>Email: {featuredPup.email}</li>
+          </ul>
+        </div>
+      )};
   </div>
 );
 };
