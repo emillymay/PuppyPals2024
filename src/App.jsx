@@ -1,5 +1,5 @@
 import {puppyList} from './data.js';
-import './path-to-css.css';
+
 import React, { useState } from 'react';
 
 function App() {
